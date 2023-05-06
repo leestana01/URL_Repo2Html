@@ -16,7 +16,12 @@ function transformURL() {
 
 function copyURL() {
     const outputURL = document.getElementById("outputURL");
-    outputURL.select();
-    document.execCommand("copy");
-    alert("주소가 복사되었습니다.");
+
+    if (outputURL.value==""){
+        alert('먼저 변환을 진행해주세요!');
+    } else {
+        outputURL.select();
+        document.execCommand("copy");
+        alert("주소가 복사되었습니다.");
+    }
 }
