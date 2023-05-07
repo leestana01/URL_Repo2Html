@@ -1,12 +1,17 @@
 function transformURL() {
     const inputURL = document.getElementById("inputURL").value;
+    const htmlName = document.getElementById("htmlFileName").value;
     const regex = /https:\/\/github.com\/([^\/]+)\/([^\/]+)/;
     const match = inputURL.match(regex);
 
     if (match) {
         const userName = match[1];
         const repoName = match[2];
-        const transformedURL = `https://${userName}.github.io/${repoName}/index.html`;
+        let fileName = htmlName || "index";
+        if (!fileName.endsWith(".html")) {
+            fileName += ".html";
+        }
+        const transformedURL = `https://${userName}.github.io/${repoName}/${fileName}`;
 
         document.getElementById("outputURL").value = transformedURL;
     } else {
