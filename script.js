@@ -25,3 +25,19 @@ function copyURL() {
         alert("주소가 복사되었습니다.");
     }
 }
+
+function updateBorder() {
+    const rightBox = document.querySelector('.right-box');
+
+    if (rightBox.offsetWidth <= 2) {
+        rightBox.style.border = '0px';
+    } else {
+        rightBox.style.border = '1px solid #000';
+    }
+}
+
+window.addEventListener('resize', updateBorder);
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateBorder();
+});
