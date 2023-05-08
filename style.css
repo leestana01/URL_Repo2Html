@@ -1,0 +1,26 @@
+.right-box {
+    position: fixed;
+    top: 80px;
+    right: 50px;
+    max-width: 600px;
+    width: calc(100% - 600px);
+    height: auto;
+    border: 1px solid #000;
+    overflow-x: scroll;
+}
+.right-box h3 {
+    margin-top: 3px;  /* 위쪽 마진을 10px로 설정 */
+    margin-bottom: 3px;  /* 아래쪽 마진을 10px로 설정 */
+}
+
+
+ /* 모바일 전용 */
+ @media (max-width: 1000px) {
+    .right-box {
+        position: static;
+        margin-top: 20px;
+        max-width: 600px;
+        width: 100%;
+        border: 1px solid #000;
+    }
+}

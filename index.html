@@ -5,34 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script.js"></script>
     <title>URL 변환기</title>
-    <style>
-        .right-box {
-            position: fixed;
-            top: 80px;
-            right: 50px;
-            max-width: 600px;
-            width: calc(100% - 600px);
-            height: auto;
-            border: 1px solid #000;
-            overflow-x: scroll;
-        }
-
-         /* 모바일 전용 */
-         @media (max-width: 800px) {
-            .right-box {
-                position: static;
-                margin-top: 20px;
-                max-width: 100%;
-                width: 100%;
-                border: 1px solid #000;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <h1>GitHub 페이지 주소 변환기 (html 링크로!) </h1>
     <h3 style="font-size: 1px;">모바일에서 접속하면 박스 위치가 달라져요..!</h3>
     <br>
+
     <input type="text" id="inputURL" size="50" placeholder="GitHub Repository 주소를 입력하세요">
     <br>
     <input type="text" id="htmlFileName" size="50" placeholder="(선택) HTML 파일명 (빈칸일 경우 index.html)">
@@ -41,24 +21,20 @@
     <input type="text" id="outputURL" size="50" placeholder="변환된 주소가 여기에 표시됩니다 :)" readonly>
     <button onclick="copyURL()">복사하기</button>
     <br>
+
     <div class="right-box">
-        <pre>
- [선행 조건]
- 
- 먼저 다음의 방식을 통해 
- 본인의 Repository가 웹페이지를 생성할 수 있도록 할 수 있습니다.
- 
- 1. Github에 Repository 생성
- 2. html 및 css 파일 업로드
- 3. 상단의 Settings 메뉴 -> 좌측 Pages 메뉴 
- -> Branch를 None에서 master 또는 main으로 변경
- 
- 이후 본인의 페이지가 생성됩니다.
- 
- 그 후 본인의 Repository 주소를 위 페이지에 입력하면 정상적인 링크가 출력됩니다.
-        </pre>
+        <h2> 선행조건 </h2>
+        먼저 다음의 방식을 통해<br>
+        본인의 Repository가 웹페이지를 생성할 수 있도록 할 수 있습니다.
+        <h3>1. Github에 Repository 생성</h3>
+        <h3>2. html 및 css 파일 업로드</h3>
+        <h3>3. 상단의 Settings 메뉴 -> 좌측 Pages 메뉴</h3>
+        <h3>-> Branch를 None에서 master 또는 main으로 변경</h3>
+        이후 본인의 페이지가 생성됩니다.<br>
+        그 후 본인의 Repository 주소를 이 페이지에 입력하면 페이지 링크가 출력됩니다.
         <img width="600px"  src="./HowToUse.gif">
     </div>
+
     <br><br>
     <h2>만든 이</h2>
     <h3>이수혁(Leestana01)</h3>
@@ -66,5 +42,6 @@
         <li>HUFS_ICE 20</li>
         <li>LikeLion 11th</li>
     </ul>
+    
 </body>
 </html>
